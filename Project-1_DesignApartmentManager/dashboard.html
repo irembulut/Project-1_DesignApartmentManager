@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard  -  Apartment Manager</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+</head>
+
+<body>
+    <div class="dashboardMainContainer">
+    
+        <div class="dashboard_sidebar" id="dashboard_sidebar">
+            <h3 class="dashboard_logo" id="dashboard_logo">APT</h3>
+            <div class="dashboard_sidebar_user">
+                <img src="images/user/profile.jpg" id="userImage"alt="User image"/>
+                <span>Elon Musk</span>
+            </div>
+            <div class="dashboard_sidebar_manus">
+                <ul class="dashboard_menu_lists">
+                    <li>
+                        <a href=""><i class="fa fa-columns"></i> <span class="menuText">Profile</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-columns"></i> <span class="menuText">Dashboard</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dashboard_content_container" id="dashboard_content_container">
+            <div class="dashboard_content_topNav">
+                <a href="" id="toggleBtn"><i class="fa fa-bars"></i> </a>
+                <a href="" id="logoutBtn"><i class="fa fa-power-off"></i> Log-out</a>
+            </div>
+            <div class=dashboard_content>
+                <div class="dashboard_content_main">
+
+                <table border="1">
+                <thead>Apartment Members</thead>
+                <caption align="bottom">
+                <caption>
+                <tr>
+                <th>Floor</th>
+                <th>Apt Number</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Phone</th>
+                <th>Fee</th>
+                <th>Created At</th>
+                </tr>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>John</td>
+                <td>Al</td>
+                <td>051231212</td>
+                <td>400</td>
+                <td>June 14 2020</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>John</td>
+                <td>Al</td>
+                <td>051231212</td>
+                <td>400</td>
+                <td>June 14 2020</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>John</td>
+                <td>Al</td>
+                <td>051231212</td>
+                <td>400</td>
+                <td>June 14 2020</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>John</td>
+                <td>Al</td>
+                <td>051231212</td>
+                <td>400</td>
+                <td>June 14 2020</td>
+                </tr>
+                </tbody>
+                </table>
+
+                </div>
+                
+            </div>
+        
+
+            
+        </div>
+
+        
+    </div>
+
+<script>
+    var sideBarIsOpen = true;
+
+    toggleBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        if(sideBarIsOpen){
+            dashboard_sidebar.style.width = '10%';
+            dashboard_sidebar.style.transiton = '0.5s all;'
+            dashboard_content_container.style.width = '90%';
+            dashboard_logo.style.fontSize = '60px';
+            userImage.style.width = '60px';
+
+            menuIcons = document.getElementsClassName('menuText');
+            for(var i=0 ; i< menuIcons.length;i++){
+                menuIcons[i].style.display = 'none';
+            }
+
+            document.getElementsByClassName('dashboard_menu_lists')[0].style.textAlign = 'center';
+
+        } else {
+            dashboard_sidebar.style.width = '20%';
+            dashboard_content_container.style.width = '80%';
+            dashboard_logo.style.fontSize = '60px';
+            userImage.style.width = '60px';
+
+            menuIcons = document.getElementsByClassName('menuText');
+            for(var i=0 ; i< menuIcons.length;i++){
+                menuIcons[i].style.display = 'none';
+            }
+
+            document.getElementsByClassName('dashboard_menu_lists')[0]textAlign = 'normal';
+            sideBarIsOpen = true;
+        }
+        
+    });
+
+
+
+</script>    
+</body>
+
+</html>
